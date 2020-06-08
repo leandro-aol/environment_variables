@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+    <div>
+        <h1>Environment: { process.env.NODE_ENV }</h1>
+
+        <p style={ { color: 'red' } }>Meu Nome: { process.env.MEU_NOME }</p>
+        <p>Meu Nome: { process.env.REACT_APP_MEU_NOME }</p>
+
+        <p>URL da nossa API: { process.env.REACT_APP_URL_NOSSA_API }</p>
+
+        <p>URL da API de terceiro: { process.env.REACT_APP_URL_OUTRA_API }</p>
     </div>
-  );
-}
+);
 
 export default App;
